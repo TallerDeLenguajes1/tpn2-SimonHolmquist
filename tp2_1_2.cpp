@@ -10,7 +10,7 @@ double mt[N][M];
 
 int main(){
     double *p = &mt[0][0];
-    int k = 0;
+    double k = 0;
     for(int i=0;i<N;i++)
     {
         for(int j=0;j<M;j++)
@@ -22,6 +22,16 @@ int main(){
     {
         cout<<*(p++)<<' ';
         if((f+1)%M==0 && f<M*N) cout<<'\n';
+    }
+    p = &mt[0][0];
+    cout<<'\n';
+    for(int i=0;i<N;i++)
+    {
+        for(int j=0;j<M;j++)
+        {
+            cout<<*(p+i*M+j)<<' ';
+        }
+        cout<<'\n';
     }
     return 0;
 }
